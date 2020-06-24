@@ -2,10 +2,10 @@
 // タスクの一覧表示機能
 // ファイルの読み込み
 
-
-// データの取得
 require_once('Models/Task.php');
 require_once('function.php');
+// データの取得
+
 
 $task = new Task();
 $tasks = $task->getAll();
