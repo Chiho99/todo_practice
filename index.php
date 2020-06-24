@@ -4,6 +4,11 @@
 
 
 // データの取得
+<<<<<<< HEAD
+=======
+require_once('Models/Task.php');
+require_once('function.php');
+>>>>>>> parent of 6edb4a6... add read function
 
 
 
