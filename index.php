@@ -9,7 +9,7 @@ require_once('function.php');
 
 $task = new Task();
 $tasks = $task->getAll();
-var_dump($tasks);
+// var_dump($tasks);
 
 
 ?>
@@ -63,16 +63,16 @@ var_dump($tasks);
                     <div class="card">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php h($task)["title"]); ?></h5>
+                            <h5 class="card-title"><?php echo h($task['title']); ?></h5>
                             <p class="card-text">
-                                <?php h($task["contents"]); ?>
+                                <?php echo h($task["contents"]); ?>
                             </p>
                             <div class="text-right d-flex justify-content-end">
                                 <!-- * href内を変更する -->
                                 <a href="edit.php" class="btn text-success">EDIT</a>
                                 <form action="delete.php" method="post">
                                     <!-- * valueの中にtaskのidが入るようにする -->
-                                    <input type="hidden" name="id" value="">
+                                    <input type="hidden" name="id" value="<?php echo h($task['id']); ?>">
                                     <button type="submit" class="btn text-danger">DELETE</button>
                                 </form>
                             </div>
